@@ -1,0 +1,23 @@
+# Entrada en modo interactivo
+
+mysql -u root -p 
+
+# Creación Base de Datos
+
+CREATE DATABASE BDMusical;
+
+# Creación de login = musica y pass = music
+
+GRANT ALL ON BDMusical.* TO 'musica'@'localhost' IDENTIFIED BY 'music';
+
+# Selección de la Base de Datos para trabajar
+
+USE BDMusical;
+
+# Creación de la tabla llamada Discos con sus campos
+
+CREATE TABLE Discos (id INT, NombreCD VARCHAR(100), GrupoMusical VARCHAR(100), GeneroMusical VARCHAR(100), NumPistas INT, AnnoPublicacion INT);
+
+# Por último, salida
+
+QUIT
